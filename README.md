@@ -17,3 +17,5 @@ To run docker, we have prepared ready-made codes for you, just run it with  __ba
 
 # Warning
 I have edited the docker usage codes and put them into our docker.txt file
+
+[Ömer Faruk POLAT](https://www.linkedin.com/in/oomer-faruk-polat/)
