@@ -1,0 +1,46 @@
+
+Dockerfile: Bir Docker imajının nasıl oluşturulacağını tanımlayan metin dosyasıdır. İmajın içeriğini, bağımlılıklarını ve nasıl çalıştırılacağını belirtir.
+
+Docker Images:  Projenin çalıştırılması için gereken tüm ortamı ve bağımlılıkları içeren hazır şablonlardır. Bu imajlar, uygulamanın kodunu, çalışma zamanını, kütüphaneleri ve diğer bağımlılıkları içerir. 
+
+Docker Container: Bir Docker imajının çalışan örneğidir. İmajlar konteynerler olarak çalıştırılır ve her biri kendi izole çalışma ortamına sahiptir.
+
+Docker Hub: Docker imajlarının depolandığı ve paylaşıldığı resmi Docker platformudur. Geniş bir imaj deposu ve topluluk desteği sağlar.
+
+
+"docker image build -f Dockerfile -t <name_of_the_image> ."    ----> İmage oluşturma komutumuz 
+
+"docker container run -p:<port>:<port> --detach --name <name_of_the_container> <name_of_the_image>"   ----> İmageslarımızı çalıştırabildiğimiz konteynerlarımız
+
+"docker images" ---> Imagesleri görüntülememizi sağlar
+
+" docker ps " -----> Çalışan konteynerları gösterir
+
+" docker ps -a " -----> Hem Çalışan Hemde Durmuş Konteynerları gösterir
+
+" docker exec -it <konteyner_adı veya konteyner_id> /bin/bash " ---> Konteynerımızn terminaline erişmemizi sağlar
+
+" docker stop 'konteynerid' " ---> Çalışan konteynerı durdurmayı sağlar
+
+" docker start 'konteynerid' " ---> Durudurlan konteynerı çalıştırmamızı sağlar
+
+" docker rm 'konteynerid yada adi' " --> konteyner islmek için
+
+"docker rmi 'imagesid' " ---> images silmek için
+
+" docker exec -it 'konteyneradi' /bin/bash " ---> Çlaışan konteynerımıznı terminalinde olmamzı sağlar
+
+Dockerlarımızı Hub' a atmak için  
+
+"docker login " docker ı teminalimize bağlamamızı sağlar
+
+"docker tag : ---> Dockerımızı imajını belirledik "docker tag webimage:latest ompolat/webdocker" bu şekilde örnek
+
+"docker push ---> hub a atmamızı sağladık "docker push ompolat/webdocker" bu şekilde örnek
+
+" docker pull kullaniciAdi/imagesadi " ----> Başka bir kişinin Imagesının kulanmamızı sağlar
+
+" docker pull 'kullanıcıadi/ımages' " ---> Başka birinin imagesını çekmemizi sağlar
+
+
+
