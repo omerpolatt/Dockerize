@@ -1,5 +1,8 @@
+# Boyut küçültme işlemi ile beraber Multi-stage Build işlemini gerçekleştirmiş oluyoruz 
+#( With the size reduction process, we realize the Multi-stage Build process. )
 
-FROM golang:1.22.3-alpine AS builder
+# alpine ile images boyut küçültme işlemi yapılmıştır ( images size reduction with alpine )
+FROM golang:1.22.3-alpine AS builder 
 
 
 WORKDIR /app
@@ -12,7 +15,6 @@ COPY . .
 
 
 RUN go build -o /app/main .
-
 
 FROM alpine:latest
 
