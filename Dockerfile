@@ -18,7 +18,7 @@ RUN go build -o /app/main .
 
 FROM alpine:latest
 
-#http istekleri için gerekli olan kısım 
+#http istekleri için gerekli olan kısım ( the part required for http requests )
 RUN apk --no-cache add ca-certificates
 
 WORKDIR /app
